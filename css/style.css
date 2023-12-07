@@ -12,30 +12,19 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+  font-family: "Staatliches", sans-serif;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-/** Globales  **/
+/** Globales **/
 
 body {
   background-color: var(--primario);
   font-size: 1.6rem;
   line-height: 1.5;
 }
-
 p {
-  font-size: 1.8rem;
-  font-family: Arial, Helvetica, sans-serif;
   color: var(--blanco);
-}
-
-a {
-  text-decoration: none;
+  font-size: 1.8rem;
 }
 
 img {
@@ -75,41 +64,47 @@ h3 {
 }
 
 .header__logo {
-  margin: 3rem 0;
+  margin: 2.5rem 0;
 }
 
 /** Navegacion **/
 
 .navegacion {
-  background-color: var(--primarioOscuro);
   padding: 1rem 0;
+  background-color: var(--primarioOscuro);
+  gap: 2rem;
+
   display: flex;
   justify-content: center;
-  gap: 3rem;
 }
 
 .navegacion__enlaces {
   font-family: var(--fuenteprincipal);
-  color: var(--blanco);
   font-size: 3rem;
+  color: var(--blanco);
 }
 
-.navegacion__enlaces:hover,
-.navegacion__enlaces--activo {
+.navegacion__enlaces--activo:hover,
+.navegacion__enlaces:hover {
   color: var(--secundario);
 }
 
+/** Footer **/
+
 .footer {
   background-color: var(--primarioOscuro);
-  padding: 1rem 0;
-  margin: 2rem;
+  padding: 1rem;
+  margin-top: 2rem;
 }
 
 .footer__texto {
+  font-size: 1.5rem;
+  color: var(--negro);
   text-align: center;
   font-family: var(--fuenteprincipal);
-  font-size: 2.2rem;
 }
+
+/** Grid **/
 
 .grid {
   display: grid;
@@ -117,14 +112,13 @@ h3 {
   gap: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(3, 1%);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 /** Producto **/
-
 .producto {
   background-color: var(--primarioOscuro);
   padding: 1rem;
@@ -135,28 +129,18 @@ h3 {
 }
 
 .producto__nombre {
-  font-size: 4rem;
+  font-size: 2.5rem;
 }
 
-/** Nosotros **/
-
-.nosotros {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
+.producto__precio {
+  font-size: 2rem;
+  color: var(--secundario);
 }
 
-@media (max-width: 768px) {
-  .nosotros {
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 2rem;
-  }
-
-  .nosotros__imagen {
-    grid-column: 2 / 3;
-    width: 100%;
-  }
-}
-
-.nosotros__imagen {
-  grid-row: 1 / 2;
+.producto__nombre,
+.producto__precio {
+  font-family: var(--fuenteprincipal);
+  margin: 1rem 0;
+  text-align: center;
+  line-height: 1.5rem;
 }
