@@ -39,26 +39,35 @@
           src="/img/3.jpg"
           alt="imagen del producto"
         />
-      </div>
 
-      <div class="camisa__contenido">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-          eligendi et ut, repellendus sapiente neque reiciendis quisquam ea
-          magni voluptates. Laboriosam minima rem qui voluptate optio inventore
-          voluptatum esse odit?
-        </p>
+        <div class="camisa__contenido">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+            eligendi et ut, repellendus sapiente neque reiciendis quisquam ea
+            magni voluptates. Laboriosam minima rem qui voluptate optio
+            inventore voluptatum esse odit?
+          </p>
 
-        <form class="formulario" action="">
-          <select name="" id="">
-            <option disabled selected="">Seleccionar talle</option>
-            <option value="">chica</option>
-            <option value="">mediana</option>
-            <option value="">grande</option>
-          </select>
-          <input type="number" placeholder="Cantidad" min="1" />
-          <input type="submit" value="Agregar al carrito" />
-        </form>
+          <form class="formulario" action="">
+            <select class="formulario__campo">
+              <option disabled selected="">Seleccionar talle</option>
+              <option value="">chica</option>
+              <option value="">mediana</option>
+              <option value="">grande</option>
+            </select>
+            <input
+              class="formulario__campo"
+              type="number"
+              placeholder="Cantidad"
+              min="1"
+            />
+            <input
+              class="formulario__submit"
+              type="submit"
+              value="Agregar al carrito"
+            />
+          </form>
+        </div>
       </div>
     </main>
 
